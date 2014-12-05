@@ -16,3 +16,8 @@ cond <- as.Date(data$Date, "%d/%m/%Y") == as.Date("2007/02/01") | as.Date(data$D
 smallData <- data[cond, ]
 # remove original data from memory
 rm(data)
+
+# extracting date time
+datetime <- strptime(paste(smallData$Date, smallData$Time), format = "%d/%m/%Y %H:%M:%S")
+smallData <- cbind(smallData, datetime)
+

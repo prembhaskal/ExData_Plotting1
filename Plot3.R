@@ -1,3 +1,4 @@
+source("InitData.R")
 # plot 3
 # initiate a png device
 png(filename = "plot3.png", width = 480, height = 480, units = "px",
